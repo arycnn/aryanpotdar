@@ -195,7 +195,7 @@ section {
 .skill-cat-title { font-family:'Orbitron',monospace; font-size:0.75rem; color:var(--cyan); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1.2rem; display:flex; align-items:center; gap:0.6rem; }
 .skill-cat-title::before { content:'//'; color:var(--green); font-family:'Share Tech Mono',monospace; }
 .skill-tags { display:flex; flex-wrap:wrap; gap:0.5rem; }
-.skill-tag { font-family:'Share Tech Mono',monospace; font-size:0.7rem; padding:0.3rem 0.8rem; border:1px solid var(--border); color:var(--body-text); letter-spacing:0.05em; transition:border-color 0.2s,color 0.2s; }
+.skill-tag { font-family:'Share Tech Mono',monospace; font-size:0.82rem; padding:0.4rem 1rem; border:1px solid var(--border); color:var(--body-text); letter-spacing:0.05em; transition:border-color 0.2s,color 0.2s; }
 .skill-tag:hover { border-color:var(--green); color:var(--green); }
 
 #experience { min-height:auto; padding:100px 6vw; }

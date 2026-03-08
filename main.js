@@ -88,7 +88,6 @@ async function fetchQuotes(){
     const data=await res.json();
     quotePool=data.map(q=>({content:q.q,author:q.a})).filter(q=>q.content&&q.author&&q.content!='...');
     if(!quotePool.length)throw new Error();
-    quoteStatus.textContent=quotePool.length+' quotes loaded';
     showQuote(0);
   }catch(e){
     try{
@@ -98,11 +97,9 @@ async function fetchQuotes(){
       const arr=data2.results||data2;
       quotePool=arr.map(q=>({content:q.content,author:q.author}));
       if(!quotePool.length)throw new Error();
-      quoteStatus.textContent=quotePool.length+' quotes loaded';
       showQuote(0);
     }catch(e2){
       quotePool=fallbackQuotes;
-      quoteStatus.textContent='cached — '+quotePool.length+' quotes';
       showQuote(0);
     }
   }
