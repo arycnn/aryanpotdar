@@ -1,50 +1,43 @@
 [
   {
-    "title": "[World] Life in Sydney",
-    "description": "Lifeboat Network",
-    "thumbnail": "thumbnails/LIS_Thumbnail_0.jpg",
-    "link": "https://www.minecraft.net/en-us/marketplace/pdp/lifeboat/life-in-sydney/caab53a1-43af-40c4-8dfc-9ccb7fb74e33"
-  },
-  {
-    "title": "[World] Life in India",
-    "description": "Lifeboat Network",
-    "thumbnail": "thumbnails/LII_thumbnail_0.jpg",
-    "link": "https://www.minecraft.net/en-us/marketplace/pdp/lifeboat/life-in-india/d3e8f855-6495-4366-a50f-19605a074f7f"
+    "title": "[Add-On] Ice Extinction - Awaiting Mojang Approval",
+    "description": "Crimson Creative",
+    "thumbnail": "default"
   },
   {
     "title": "[World] Life in London - Awaiting Mojang Approval",
     "description": "Lifeboat Network",
-    "thumbnail": "thumbnails/default.jpg"
+    "thumbnail": "default"
   },
   {
     "title": "[Add-On] Enderite Tools - Awaiting Mojang Approval",
     "description": "5 Frame Studios",
-    "thumbnail": "thumbnails/default.jpg"
+    "thumbnail": "default"
   },
   {
     "title": "[World] Escape from Giant Rooms - Awaiting Mojang Approval",
     "description": "Lifeboat Network",
-    "thumbnail": "thumbnails/default.jpg"
+    "thumbnail": "default"
   },
   {
     "title": "[World] Mob Weapons - In Development",
     "description": "Block Studios",
-    "thumbnail": "thumbnails/default.jpg"
+    "thumbnail": "default"
   },
   {
     "title": "[Add-On] Craftable Castles - In Development",
     "description": "Flowscape Studios",
-    "thumbnail": "thumbnails/default.jpg"
+    "thumbnail": "default"
   },
   {
     "title": "[World] Chicken Jockey Battle Royale - In Development",
     "description": "Lifeboat Network",
-    "thumbnail": "thumbnails/default.jpg"
+    "thumbnail": "default"
   },
   {
     "title": "[Add-On] Civilization - In Development",
     "description": "Foxel Games",
-    "thumbnail": "thumbnails/default.jpg"
+    "thumbnail": "default"
   },
   {
     "title": "[Add-On] Caves Biomes",
@@ -81,5 +74,17 @@
     "description": "Lifeboat Network",
     "thumbnail": "thumbnails/Christmas_Trains_Thumbnail_0.jpg",
     "link": "https://www.minecraft.net/en-us/marketplace/pdp/lifeboat/christmas-trains/7dfba565-e3aa-4b7b-aad9-f73e863e5308"
+  },
+  {
+    "title": "[World] Life in Sydney",
+    "description": "Lifeboat Network",
+    "thumbnail": "thumbnails/LIS_Thumbnail_0.jpg",
+    "link": "https://www.minecraft.net/en-us/marketplace/pdp/lifeboat/life-in-sydney/caab53a1-43af-40c4-8dfc-9ccb7fb74e33"
+  },
+  {
+    "title": "[World] Life in India",
+    "description": "Lifeboat Network",
+    "thumbnail": "thumbnails/LII_thumbnail_0.jpg",
+    "link": "https://www.minecraft.net/en-us/marketplace/pdp/lifeboat/life-in-india/d3e8f855-6495-4366-a50f-19605a074f7f"
   }
 ]

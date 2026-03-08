@@ -307,6 +307,60 @@
     .privacy-box p { font-family:'Share Tech Mono',monospace; font-size:0.78rem; color:var(--body-text); line-height:1.9; letter-spacing:0.03em; }
     .privacy-box a { color:var(--cyan); }
 
+    /* ── THEME GLITCH FLASH ── */
+    .theme-glitch-flash {
+      animation: screenGlitch 0.15s steps(1) forwards;
+    }
+    @keyframes screenGlitch {
+      0%   { filter: none; }
+      20%  { filter: hue-rotate(180deg) saturate(3) brightness(1.4); }
+      40%  { filter: invert(0.08) brightness(1.1); }
+      60%  { filter: hue-rotate(90deg) saturate(2); }
+      80%  { filter: brightness(0.7) contrast(1.5); }
+      100% { filter: none; }
+    }
+
+    /* ── DEFAULT THUMBNAIL ── */
+    .project-thumb-default {
+      width: 100%; aspect-ratio: 16/9;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 0.6rem;
+      position: relative; overflow: hidden;
+      background: var(--panel);
+    }
+    .project-thumb-default::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(var(--theme-green, #00ff9f) 1px, transparent 1px),
+        linear-gradient(90deg, var(--theme-green, #00ff9f) 1px, transparent 1px);
+      background-size: 28px 28px;
+      opacity: 0.07;
+    }
+    .project-thumb-default::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, transparent 40%, rgba(0,255,159,0.04) 100%);
+    }
+    .ptd-icon {
+      font-family: 'Orbitron', monospace; font-size: 2rem;
+      color: var(--theme-green, #00ff9f);
+      text-shadow: 0 0 20px var(--theme-green, #00ff9f);
+      z-index: 1; opacity: 0.6;
+    }
+    .ptd-label {
+      font-family: 'Share Tech Mono', monospace; font-size: 0.65rem;
+      color: var(--theme-green, #00ff9f); letter-spacing: 0.25em;
+      text-transform: uppercase; z-index: 1; opacity: 0.5;
+    }
+    .ptd-corner {
+      position: absolute; font-family: 'Share Tech Mono', monospace;
+      font-size: 0.55rem; color: var(--theme-green, #00ff9f);
+      opacity: 0.25; letter-spacing: 0.1em;
+    }
+    .ptd-corner.tl { top: 8px; left: 10px; }
+    .ptd-corner.br { bottom: 8px; right: 10px; }
+
     /* ── LOADER ── */
     #loader { position:fixed; inset:0; background:var(--bg); z-index:99999; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.5rem; transition:opacity 0.5s,visibility 0.5s; }
     #loader.hidden { opacity:0; visibility:hidden; }
@@ -379,6 +433,7 @@
   <div class="status-item"><div class="status-dot"></div> ONLINE</div>
   <div class="status-item">// BEDROCK DEV</div>
   <div class="status-item" id="time-display"></div>
+  <div class="status-item" id="theme-name" style="margin-left:auto;display:none;"></div>
   <div class="status-item" style="margin-left:auto;">v1.0.0 // ARYAN.DEV</div>
 </div>
 
@@ -388,7 +443,7 @@
   <h1 class="hero-name"><span class="glitch" data-text="ARYAN">ARYAN</span></h1>
   <div class="hero-role">Minecraft Bedrock Developer<span class="blink">_</span></div>
   <p class="hero-desc">
-    Bedrock developer by obsession. I specialize in custom entities, scripting API, server infrastructure, and shipping Marketplace content that actually performs.
+    Engineering immersive Minecraft Bedrock experiences — behavior packs, resource packs, custom entities, scripting API, server infrastructure, and Marketplace content. Passionate about pushing the limits of what Bedrock can do.
   </p>
   <div class="hero-cta">
     <a href="#projects" class="btn">View Projects</a>
@@ -423,7 +478,7 @@
       <div class="stat-card"><div class="stat-num">3+</div><div class="stat-label">Years in Industry</div></div>
       <div class="stat-card"><div class="stat-num">BP/RP</div><div class="stat-label">Marketplace Packs</div></div>
       <div class="stat-card"><div class="stat-num">BDS</div><div class="stat-label">Server Infrastructure</div></div>
-      <div class="stat-card"><div class="stat-num">♟</div><div class="stat-label">Chess Champion</div></div>
+      <div class="stat-card"><div class="stat-num">🌙</div><div class="stat-label">Night Owl Coder</div></div>
     </div>
   </div>
 </section>
@@ -571,7 +626,8 @@
   </div>
   <div class="contact-grid">
     <div class="contact-text">
-      <p>Got a project in mind? Want to collaborate on Marketplace content or server infrastructure? Or just want to talk? I'm open to it.</p>
+      <p>Got a project in mind? Want to collaborate on a Bedrock add-on, Marketplace content, or server infrastructure? Or just want to talk chess? I'm open to it.</p>
+      <p style="margin-top:1rem;">I follow a night schedule and can handle American and European time zones without any issues. Find me below.</p>
     </div>
     <div class="contact-links">
       <a href="https://github.aryanpotdar.com" class="contact-link" target="_blank">
@@ -617,9 +673,11 @@
     <div class="section-line"></div>
   </div>
   <div class="privacy-box">
-    <h3>[ LAST UPDATED: 2026 ]</h3>
+    <h3>[ LAST UPDATED: 2025 ]</h3>
     <p>
       This website does not collect, store, or process any personal data. No cookies are set, no analytics are run, and no tracking scripts are loaded. This is a static site hosted via GitHub Pages.
+      <br/><br/>
+      GitHub Pages may collect limited technical data (such as request logs) as part of their hosting infrastructure. Refer to <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank">GitHub's Privacy Statement</a> for details.
       <br/><br/>
       Questions? Reach out via the contact section above.
     </p>
@@ -672,7 +730,7 @@
   const chars='01アイウエオカキクケコサシスセソタチツテトナニヌネノ';
   setInterval(()=>{
     ctx.fillStyle='rgba(2,11,6,0.05)';ctx.fillRect(0,0,W,H);
-    ctx.fillStyle='#00ff9f';ctx.font='13px Share Tech Mono';
+    ctx.fillStyle=matrixColor;ctx.font='13px Share Tech Mono';
     drops.forEach((y,i)=>{
       ctx.fillText(chars[Math.floor(Math.random()*chars.length)],i*18,y*18);
       if(y*18>H&&Math.random()>0.975)drops[i]=0;
@@ -696,7 +754,17 @@
       projects.forEach(p=>{
         const card=document.createElement('div');
         card.className='project-card';
-        const th=p.thumbnail?`<img class="project-thumb" src="${p.thumbnail}" alt="${p.title}" loading="lazy"/>`:`<div class="project-thumb-placeholder">[ NO PREVIEW ]</div>`;
+        let th;
+        if(!p.thumbnail || p.thumbnail==='default'){
+          th=`<div class="project-thumb-default">
+            <div class="ptd-corner tl">[ WIP ]</div>
+            <div class="ptd-icon">⬡</div>
+            <div class="ptd-label">In Development</div>
+            <div class="ptd-corner br">PREVIEW UNAVAILABLE</div>
+          </div>`;
+        } else {
+          th=`<img class="project-thumb" src="${p.thumbnail}" alt="${p.title}" loading="lazy"/>`;
+        }
         card.innerHTML=`${th}<div class="project-overlay"></div><div class="project-info"><div class="project-title">${p.title}</div><div class="project-desc">${p.description}</div>${p.link?`<a href="${p.link}" class="project-link" target="_blank">View Project</a>`:''}</div>`;
         grid.appendChild(card);
         card.addEventListener('mouseenter',()=>cur.style.transform='translate(-50%,-50%) scale(2)');
@@ -705,6 +773,66 @@
     }catch(e){}
   }
   loadProjects();
+
+  // COLOR GLITCH CYCLE
+  const themes = [
+    { green:'#00ff9f', cyan:'#00e5ff', red:'#ff2d55', bg:'#020b06', bg2:'#040f09', panel:'#071a0e', border:'#00ff9f22', bodyText:'#b0d8bc', muted:'#7aaa8a', name:'// MATRIX GREEN' },
+    { green:'#00b4ff', cyan:'#bf00ff', red:'#ff6b00', bg:'#020a12', bg2:'#030d18', panel:'#051525', border:'#00b4ff22', bodyText:'#aaccdd', muted:'#5588aa', name:'// CYBER BLUE' },
+    { green:'#ff00aa', cyan:'#ff6ef7', red:'#ffdd00', bg:'#120208', bg2:'#180310', panel:'#220415', border:'#ff00aa22', bodyText:'#ddb0cc', muted:'#aa5588', name:'// NEON MAGENTA' },
+    { green:'#ffcc00', cyan:'#ff8800', red:'#ff2200', bg:'#100e00', bg2:'#151200', panel:'#1e1900', border:'#ffcc0022', bodyText:'#ddd0aa', muted:'#998855', name:'// AMBER ALERT' },
+    { green:'#00ffcc', cyan:'#00ddff', red:'#ff3377', bg:'#021210', bg2:'#031815', panel:'#042018', border:'#00ffcc22', bodyText:'#aaddd4', muted:'#55aa99', name:'// TEAL PROTOCOL' },
+    { green:'#aa00ff', cyan:'#ff00cc', red:'#00ffee', bg:'#08020f', bg2:'#0d0318', panel:'#130520', border:'#aa00ff22', bodyText:'#ccaadd', muted:'#8855aa', name:'// ULTRAVIOLET' },
+  ];
+  let currentTheme = 0;
+  const root = document.documentElement;
+
+  function applyTheme(t) {
+    root.style.setProperty('--green',    t.green);
+    root.style.setProperty('--cyan',     t.cyan);
+    root.style.setProperty('--red',      t.red);
+    root.style.setProperty('--bg',       t.bg);
+    root.style.setProperty('--bg2',      t.bg2);
+    root.style.setProperty('--panel',    t.panel);
+    root.style.setProperty('--border',   t.border);
+    root.style.setProperty('--body-text',t.bodyText);
+    root.style.setProperty('--muted',    t.muted);
+    root.style.setProperty('--theme-green', t.green);
+    // update matrix color
+    matrixColor = t.green;
+    // update status bar theme name
+    const sb = document.getElementById('theme-name');
+    if(sb) sb.textContent = t.name;
+  }
+
+  function triggerThemeGlitch() {
+    currentTheme = (currentTheme + 1) % themes.length;
+    const body = document.body;
+    // rapid flicker 3 times before settling
+    let flickers = 0;
+    const flicker = setInterval(() => {
+      body.classList.toggle('theme-glitch-flash');
+      flickers++;
+      if(flickers >= 6) {
+        clearInterval(flicker);
+        body.classList.remove('theme-glitch-flash');
+        applyTheme(themes[currentTheme]);
+      }
+    }, 60);
+  }
+
+  // trigger every 18–28 seconds randomly
+  function scheduleThemeGlitch() {
+    const delay = 18000 + Math.random() * 10000;
+    setTimeout(() => {
+      triggerThemeGlitch();
+      scheduleThemeGlitch();
+    }, delay);
+  }
+  scheduleThemeGlitch();
+
+  // also update matrix color dynamically
+  let matrixColor = '#00ff9f';
+
 </script>
 </body>
 </html>
