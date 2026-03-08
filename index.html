@@ -286,6 +286,20 @@
     .contact-link-label { font-family:'Orbitron',monospace; font-size:0.75rem; color:#fff; letter-spacing:0.1em; }
     .contact-link-value { font-size:0.85rem; color:var(--muted); margin-top:0.2rem; font-family:'Share Tech Mono',monospace; }
 
+    /* ── INTERESTS ── */
+    #interests { min-height: auto; padding: 100px 6vw; background: var(--bg2); }
+    .interests-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .interest-pill {
+      display: flex; align-items: center; gap: 0.6rem;
+      padding: 0.7rem 1.3rem;
+      background: var(--panel); border: 1px solid var(--border);
+      font-family: 'Share Tech Mono', monospace; font-size: 0.75rem;
+      color: var(--body-text); letter-spacing: 0.06em;
+      transition: border-color 0.25s, color 0.25s, box-shadow 0.25s;
+    }
+    .interest-pill::before { content: '◈'; color: var(--green); font-size: 0.6rem; }
+    .interest-pill:hover { border-color: var(--green); color: var(--green); box-shadow: 0 0 12px rgba(0,255,159,0.1); }
+
     /* ── PRIVACY ── */
     #privacy { min-height:auto; padding:80px 6vw; background:var(--bg2); }
     .privacy-box { background:var(--panel); border:1px solid var(--border); padding:2.5rem; max-width:800px; }
@@ -307,12 +321,13 @@
       body { cursor: auto; }
       .nav-hamburger { display: flex; }
       .nav-links {
-        position: fixed; top: 60px; left: 0; right: 0;
-        background: rgba(2,11,6,0.97); border-bottom: 1px solid var(--border);
-        flex-direction: column; gap: 0; padding: 0.5rem 0;
-        transform: translateY(-110%); transition: transform 0.3s ease; z-index: 999;
+        position: fixed; top: 88px; left: 0; right: 0;
+        background: rgba(2,11,6,0.98); border-bottom: 1px solid var(--border);
+        flex-direction: column; gap: 0; padding: 0;
+        max-height: 0; overflow: hidden;
+        transition: max-height 0.35s ease; z-index: 999;
       }
-      .nav-links.open { transform: translateY(0); }
+      .nav-links.open { max-height: 400px; padding: 0.5rem 0; }
       .nav-links li a { display: block; padding: 0.9rem 2rem; font-size: 0.9rem; }
       .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
       .hero-grid-lines, .hero-hex { display: none; }
@@ -373,7 +388,7 @@
   <h1 class="hero-name"><span class="glitch" data-text="ARYAN">ARYAN</span></h1>
   <div class="hero-role">Minecraft Bedrock Developer<span class="blink">_</span></div>
   <p class="hero-desc">
-    Engineering immersive Minecraft Bedrock experiences — behavior packs, resource packs, custom entities, scripting API, server infrastructure, and Marketplace content. Passionate about pushing the limits of what Bedrock can do.
+    Bedrock developer by obsession. I specialize in custom entities, scripting API, server infrastructure, and shipping Marketplace content that actually performs.
   </p>
   <div class="hero-cta">
     <a href="#projects" class="btn">View Projects</a>
@@ -556,8 +571,7 @@
   </div>
   <div class="contact-grid">
     <div class="contact-text">
-      <p>Got a project in mind? Want to collaborate on a Bedrock add-on, Marketplace content, or server infrastructure? Or just want to talk chess? I'm open to it.</p>
-      <p style="margin-top:1rem;">I follow a night schedule and can handle American and European time zones without any issues. Find me below.</p>
+      <p>Got a project in mind? Want to collaborate on Marketplace content or server infrastructure? Or just want to talk? I'm open to it.</p>
     </div>
     <div class="contact-links">
       <a href="https://github.aryanpotdar.com" class="contact-link" target="_blank">
@@ -576,19 +590,36 @@
   </div>
 </section>
 
+<!-- INTERESTS -->
+<section id="interests">
+  <div class="section-header">
+    <div class="section-tag">// 06 — INTERESTS</div>
+    <h2 class="section-title">Beyond <span>The Code</span></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="interests-grid">
+    <div class="interest-pill">Minecraft Add-on Development</div>
+    <div class="interest-pill">Gaming &amp; Esports</div>
+    <div class="interest-pill">Technology &amp; Innovation</div>
+    <div class="interest-pill">Paranormal Studies &amp; Exploration</div>
+    <div class="interest-pill">Vanlife &amp; Camping Adventures</div>
+    <div class="interest-pill">K-Pop</div>
+    <div class="interest-pill">Nightlife</div>
+    <div class="interest-pill">Video Editing</div>
+  </div>
+</section>
+
 <!-- PRIVACY -->
 <section id="privacy">
   <div class="section-header">
-    <div class="section-tag">// 06 — PRIVACY</div>
+    <div class="section-tag">// 07 — PRIVACY</div>
     <h2 class="section-title">Privacy <span>Policy</span></h2>
     <div class="section-line"></div>
   </div>
   <div class="privacy-box">
-    <h3>[ LAST UPDATED: 2025 ]</h3>
+    <h3>[ LAST UPDATED: 2026 ]</h3>
     <p>
       This website does not collect, store, or process any personal data. No cookies are set, no analytics are run, and no tracking scripts are loaded. This is a static site hosted via GitHub Pages.
-      <br/><br/>
-      GitHub Pages may collect limited technical data (such as request logs) as part of their hosting infrastructure. Refer to <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank">GitHub's Privacy Statement</a> for details.
       <br/><br/>
       Questions? Reach out via the contact section above.
     </p>
