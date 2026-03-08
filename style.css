@@ -189,7 +189,7 @@ section {
 .stat-label { font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:var(--muted); letter-spacing:0.1em; text-transform:uppercase; margin-top:0.3rem; }
 
 #skills { min-height:auto; padding:100px 6vw; background:var(--bg2); }
-.skills-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.5rem; }
+.skills-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:1.5rem; }
 .skill-category { background:var(--panel); border:1px solid var(--border); padding:1.8rem; transition:border-color 0.3s,transform 0.3s; }
 .skill-category:hover { border-color:var(--cyan); transform:translateY(-4px); }
 .skill-cat-title { font-family:'Orbitron',monospace; font-size:0.75rem; color:var(--cyan); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1.2rem; display:flex; align-items:center; gap:0.6rem; }
