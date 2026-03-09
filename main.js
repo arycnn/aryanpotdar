@@ -150,6 +150,14 @@ function applyTheme(t){
   if(sb)sb.textContent=t.name;
 }
 
+let isScrolling=false;
+let scrollTimer=null;
+window.addEventListener('scroll',()=>{
+  isScrolling=true;
+  clearTimeout(scrollTimer);
+  scrollTimer=setTimeout(()=>{isScrolling=false;},200);
+},{passive:true});
+
 function triggerThemeGlitch(){
   currentTheme=(currentTheme+1)%themes.length;
   const body=document.body;
@@ -163,6 +171,12 @@ function triggerThemeGlitch(){
 
 function scheduleThemeGlitch(){
   const delay=18000+Math.random()*10000;
-  setTimeout(()=>{triggerThemeGlitch();scheduleThemeGlitch();},delay);
+  setTimeout(()=>{
+    if(isScrolling){
+      setTimeout(()=>{triggerThemeGlitch();scheduleThemeGlitch();},300);
+    }else{
+      triggerThemeGlitch();scheduleThemeGlitch();
+    }
+  },delay);
 }
 scheduleThemeGlitch();
